@@ -1,0 +1,14 @@
+<div style="clear: both">
+    <a href="{% url 'Home' %}"><h1 style="display:inline-block;">Home</h1></a>
+    <a href="{% url 'About' %}"><h1 style="display:inline-block;">| About</h1></a>
+</div>
+<hr />
+<h2>Word Counter</h2>
+
+<div style="text-align: top; padding-top: 10px">
+    <form action="{% url 'Count' %}">
+        <textarea cols="40" rows="5" name="fulltext"></textarea>
+        <br/>
+        <input type="submit" value="Count"/>
+    </form>
+</div>

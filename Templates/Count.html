@@ -1,0 +1,23 @@
+<div style="clear: both">
+    <a href="{% url 'Home' %}"><h1 style="display:inline-block;">Home</h1></a>
+    <a href="{% url 'About' %}"><h1 style="display:inline-block;">| About</h1></a>
+</div>
+<hr />
+<h1>Summary</h1>
+<h2>There are {{ Count }} words in your text</h2>
+
+<form action="{% url 'Home' %}">
+    <input type="submit" value="Count Again"/>
+</form>
+
+<h1>Your text:</h1>
+{{ fulltext }}
+
+
+<h1>Word Count</h1>
+
+{% for word, countTotal in sortedWords %}
+{{ word }} - {{ countTotal}}
+<br />
+
+{% endfor %}
